@@ -1,1 +1,46 @@
-/Users/victorteteng/Desktop/versel-web/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+<body>
+  <style>
+    body {
+  text-align: center;
+  border: solid rgb(238, 216, 93);
+  border-radius: 20px 20px 0px 0px;
+}
+#container {
+  width: 100%;
+  background-color: rgb(253, 251, 251);
+}
+.tea-img {
+  width: 100px;
+  border-radius: 100px;
+}
+  </style>
+  <h1>SELAMAT Malam SEMUA</h1>
+  <div id="container">
+  </div>
+  <script>
+const imgs= [
+  "images/bandulan.jpg",
+  "images/pantai.jpg",
+  "images/nyilem.jpg"
+]
+const container = document.getElementById("container");
+function render() {
+  let imgsDOM = "";
+  for (let i = 0; i < imgs.length; i++ ) {
+imgsDOM += `<img alt="beach views" class="tea-img" src=${imgs[i]}>`
+  }
+  container.innerHTML = imgsDOM;
+};
+render();
+
+  </script>
+</body>
+</html>
